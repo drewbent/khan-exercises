@@ -29,11 +29,27 @@ a.show-subhint {
     font-style: italic;
 }
 
+div.definition {
+    position: absolute;
+    border: 1px solid #aaaaaa;
+    background: #f9f9f9;
+    display: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    z-index: 1000;
+}
+
 #workarea { margin-left: 30px; }
 #hintsarea { margin-left: 50px; }
 #answer_area ul { list-style: none; }
 #answer_area li { padding: 7px 0; }
 #answer_area li label { display: block; }
+#answer_area li input[type=radio] { float: left; margin-top: 4px; }
+#answer_area li .value { display: block; min-height: 22px; margin-left: 18px; }
 
 #extras li { display: inline; }
 #extras li:before { content: "| "; }
@@ -109,6 +125,7 @@ body.debug .graphie { outline: 1px dashed red; }
     padding: 10px;
     margin: 0 -10px;
     border-bottom: 1px solid #c3c3c3;
+    overflow-x: auto;
 }
 
 #answer_area .answer-buttons {
@@ -345,10 +362,6 @@ div.timeline-total {
 
 .lite #answercontent .info-box-header {
 	font-size: 16px;
-}
-
-.lite #answercontent input.button {
-	margin-top: 2px;
 }
 
 .lite #answercontent #examples-show, .lite #answercontent #examples {
